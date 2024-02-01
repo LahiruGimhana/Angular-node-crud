@@ -60,11 +60,33 @@ export class StudentcrudComponent {
         this.fee = undefined;
        })      
     }
-   }
+  }
+  
+
   setUpdate(data: any){
+    let bodyData = 
+    {
+      "stname" : this.stname,
+      "course" : this.course,
+      "fee" : this.fee
+    };
+    
+    // this.http.put("http://localhost:9002/api/student/update"+ "/"+ this.currentStudentID,bodyData).subscribe((resultData: any)=>
+    // {
+    //     console.log(resultData);
+    //     alert("Student Registered Updateddd")
+    //     this.getAllStudent();
       
-    }
+    // });
+  }
+  
   setDelete(data: any) {
-      
-    }
+    // this.http.delete("http://localhost:9002/api/student/delete"+ "/"+ data.id).subscribe((resultData: any)=>
+    // {
+    //     console.log(resultData);
+    //     alert("Student Deletedddd")
+    //     this.getAllStudent();
+    // });
+  }
 }
+
